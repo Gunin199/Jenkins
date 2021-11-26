@@ -12,7 +12,7 @@ class TestSum(unittest.TestCase):
         n1 = 20
         n2 = 30
         result = my_avg(n1,n2)
-        self.assertEqual(result, 25)
+        self.assertEqual(result, 45)
 
 if __name__ == '__main__':
     unittest.main()
