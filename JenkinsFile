@@ -1,0 +1,24 @@
+pipeline { 
+agent any
+    stages {
+        stage('Clone Git') {
+            steps {
+                git branch: 'main',
+                credentialsId: 'github-jenkins-pat',
+                url: 'https://github.com/Gunin199/Jenkins.git'
+            }
+        }
+        stage('Build Code') {
+            steps {
+                sh "chmod u+x AverageCalc.py"
+                sh "./AverageCalc.py"
+            }
+        }
+     stage('Test Code') {
+            steps {
+                sh "chmod u+x Test.py"
+                sh "./Test.py"
+            }
+        }
+    } 
+}
