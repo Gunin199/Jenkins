@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 # Test case for average of 2 numbers
 import unittest
 
